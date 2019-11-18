@@ -1,0 +1,13 @@
+ <%		AuditDBQuery audit=new AuditDBQuery();
+					ArrayList AuditScehdule501=audit.selectPendingPoints(email);
+					System.out.println("Audit Schedule Data Fetch "+AuditScehdule501);
+					System.out.println("Audit Scehdule 501 "+AuditScehdule501.size()); %>
+					<br>
+				 <a href="../../jsp/audit/audit_status_close.jsp">
+				<span style="background-color: yellow"> <font
+					color="#800000" size=2>You have </font></span> <span
+					style="background-color: yellow"> <font color="#000080"
+					size=2> <%=AuditScehdule501.size() %></font></span><font color="#800000"
+					size=2><span style="background-color: yellow">
+				 Audit Pending Point </span></font></a>
+					</font>

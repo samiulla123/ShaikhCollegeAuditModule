@@ -1,0 +1,18 @@
+<%
+					ArrayList AuditScehdule123=audit.AuditSchedule(email);
+					System.out.println("Audit Scehdule "+AuditScehdule123);
+					String AuditDate="00";
+					String auditType="00";
+					for(int au=0;au<AuditScehdule123.size();au++)
+					{
+						ArrayList auditFetch=(ArrayList) AuditScehdule123.get(au);
+						
+						AuditDate=(String)auditFetch.get(1);
+						auditType=audit.selecttype(auditFetch.get(0).toString());
+					}
+					System.out.println("Audit Date "+AuditDate+" Audit Type "+auditType);
+					 %>
+				
+				<span style="background-color: #FFF9F9"> <font color="#800000" size=2>You
+				have audit <font color="#000080" size=2> <%=auditType %></font> schedule on <font color="#000080" size=2> <%=AuditDate %></font></font></span>
+				<span style="background-color: #EFEFEF"> 
